@@ -1,0 +1,726 @@
+{
+  "Items": [
+      {
+          "pickupDate": {
+              "S": "2020-05-31T22:00:00.000Z"
+          },
+          "pickupTime": {
+              "S": "18:00 - 18:30"
+          },
+          "orderedCourses": {
+              "L": [
+                  {
+                      "M": {
+                          "name": {
+                              "S": "kaas"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "edammer"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "worst"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "salami"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "2"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "chorizo"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "lunch"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "BOERENKAAS, GROVE MOSTERD EN CORNICHONS"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "OSSENWORST, BOSUI EN MOSTERDMAYONAISE"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "GEHAKTBAL, AUGURK, GROVE MOSTERD"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "6.5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              ]
+          },
+          "timestamp": {
+              "S": "1590924016036"
+          },
+          "comments": {
+              "S": "N.A"
+          },
+          "address": {
+              "S": "waterloo"
+          },
+          "delivery": {
+              "S": "dropoff"
+          },
+          "email": {
+              "S": "schoonderwoerdenblock@gmail.com"
+          },
+          "phone": {
+              "S": "123456"
+          },
+          "name": {
+              "S": "jacko schoonderwoerd"
+          }
+      },
+      {
+          "pickupDate": {
+              "S": "2020-05-31T22:00:00.000Z"
+          },
+          "pickupTime": {
+              "S": "17:00 - 17:30"
+          },
+          "orderedCourses": {
+              "L": [
+                  {
+                      "M": {
+                          "name": {
+                              "S": "kaas"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "edammer"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "worst"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "salami"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "2"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "chorizo"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "lunch"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "BOERENKAAS, GROVE MOSTERD EN CORNICHONS"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "OSSENWORST, BOSUI EN MOSTERDMAYONAISE"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "GEHAKTBAL, AUGURK, GROVE MOSTERD"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "6.5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              ]
+          },
+          "timestamp": {
+              "S": "1590908495404"
+          },
+          "comments": {
+              "S": "N.A"
+          },
+          "address": {
+              "S": "waterloo"
+          },
+          "delivery": {
+              "S": "dropoff"
+          },
+          "email": {
+              "S": "schoonderwoerdenblock@gmail.com"
+          },
+          "phone": {
+              "S": "123456"
+          },
+          "name": {
+              "S": "jacko schoonderwoerd"
+          }
+      },
+      {
+          "pickupDate": {
+              "S": "2020-05-31T22:00:00.000Z"
+          },
+          "pickupTime": {
+              "S": "18:00 - 18:30"
+          },
+          "orderedCourses": {
+              "L": [
+                  {
+                      "M": {
+                          "name": {
+                              "S": "kaas"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "edammer"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "worst"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "salami"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "2"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "chorizo"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "lunch"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "BOERENKAAS, GROVE MOSTERD EN CORNICHONS"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "OSSENWORST, BOSUI EN MOSTERDMAYONAISE"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "GEHAKTBAL, AUGURK, GROVE MOSTERD"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "6.5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              ]
+          },
+          "timestamp": {
+              "S": "1590924106202"
+          },
+          "comments": {
+              "S": "N.A"
+          },
+          "address": {
+              "S": "waterloo"
+          },
+          "delivery": {
+              "S": "dropoff"
+          },
+          "email": {
+              "S": "schoonderwoerdenblock@gmail.com"
+          },
+          "phone": {
+              "S": "123456"
+          },
+          "name": {
+              "S": "karel"
+          }
+      },
+      {
+          "pickupDate": {
+              "S": "2020-05-31T22:00:00.000Z"
+          },
+          "pickupTime": {
+              "S": "18:00 - 18:30"
+          },
+          "orderedCourses": {
+              "L": [
+                  {
+                      "M": {
+                          "name": {
+                              "S": "kaas"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "edammer"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "worst"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "salami"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "2"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "chorizo"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "1"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "M": {
+                          "name": {
+                              "S": "lunch"
+                          },
+                          "courseItems": {
+                              "L": [
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "BOERENKAAS, GROVE MOSTERD EN CORNICHONS"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "OSSENWORST, BOSUI EN MOSTERDMAYONAISE"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "3"
+                                          },
+                                          "price": {
+                                              "N": "5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  },
+                                  {
+                                      "M": {
+                                          "name": {
+                                              "S": "GEHAKTBAL, AUGURK, GROVE MOSTERD"
+                                          },
+                                          "description": {
+                                              "S": ""
+                                          },
+                                          "amount": {
+                                              "N": "1"
+                                          },
+                                          "price": {
+                                              "N": "6.5"
+                                          },
+                                          "imageUrl": {
+                                              "S": ""
+                                          }
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              ]
+          },
+          "timestamp": {
+              "S": "1590995395716"
+          },
+          "comments": {
+              "S": "N.A"
+          },
+          "address": {
+              "S": "waterloo"
+          },
+          "delivery": {
+              "S": "dropoff"
+          },
+          "email": {
+              "S": "schoonderwoerdenblock@gmail.com"
+          },
+          "phone": {
+              "S": "123456"
+          },
+          "name": {
+              "S": "karel"
+          }
+      }
+  ],
+  "Count": 4,
+  "ScannedCount": 4
+}

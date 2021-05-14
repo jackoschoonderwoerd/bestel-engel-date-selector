@@ -1,0 +1,33 @@
+<mat-nav-list>
+  <nav
+    [ngClass]="{ 'mobile-nav-open': mobileNavStatus}"
+    class="mobile-nav-closed">
+    <a mat-list-item (click)="toggleSideNav()" href="http://cafedeengelbewaarder.nl">
+
+      <span>CAFÉ</span>
+    </a>
+    <a mat-list-item (click)="toggleSideNav()" routerLink="/home">
+      <span>HOME</span>
+    </a>
+    <a
+      *ngFor="let courseName of courseNames"
+      mat-list-item
+      (click)="courseSelected(courseName)">
+      {{courseName | uppercase}}
+    </a>
+    <a mat-list-item
+      (click)="onBestellen()">
+      <!-- <span class="material-icons shopping-basket-icon">
+        shopping_basket
+      </span> -->
+      <span>BESTELLEN</span>
+    </a>
+    <hr>
+    <!-- <a mat-list-item (click)="toggleSideNav()" routerLink="/test">
+      <span>TEST</span>
+    </a> -->
+    <!-- <a mat-list-item (click)="toggleSideNav()" routerLink="/overview">
+      <span>ADMIN</span>
+    </a> -->
+  </nav>
+</mat-nav-list>

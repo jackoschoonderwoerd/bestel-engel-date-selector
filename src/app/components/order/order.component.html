@@ -1,0 +1,33 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+  <div class="card-container">
+    <div
+      *ngIf="loadingStatus"
+      class="mat-spinner"
+      fxLayout fxLayoutAlign="center">
+      <mat-spinner></mat-spinner>
+    </div>
+    <div *ngIf="!loadingStatus" class="" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card fxFlex>
+        <div
+          class="order-item-container"
+          *ngFor="let course of company.menu.courses">
+          <app-order-course [course]="course"></app-order-course>
+        </div>
+      </mat-card>
+
+      <mat-card>
+        <div
+          class=""
+          *ngIf="orderTotal === 0">NOG NIETS GEKOZEN
+        </div>
+        <div *ngIf="orderTotal !== 0 && orderTotal !== undefined"
+          fxLayout fxLayoutAlign="space-between">
+          <span>Totaal:</span><span><b>{{orderTotal | currency:"EUR"}}</b></span>
+        </div>
+      </mat-card>
+      <div class="app-order-form">
+        <app-order-form></app-order-form>
+      </div>
+    </div> <!-- end !loadingStatus -->
+  </div> <!-- end card-container -->
+</section>

@@ -1,0 +1,10 @@
+button {
+  border: none;
+  background-color: none;
+  height: 50px;
+  width: 50px;
+  padding-top: 5px;
+}
+mat-dialog-actions {
+  justify-content: flex-end;
+}

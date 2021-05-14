@@ -1,0 +1,239 @@
+<div class="wrapper">
+  <div class="header" fxLayout="row" fxLayoutAlign="space-between">
+    <div class="buttons" fxLayout fxLayoutGap="15px">
+      <button
+        style="border: 1px solid black; height: 100%;"
+        mat-raised-button
+        color="primary"
+        (click)="onPrintOrders()">
+        PRINT ORDERS
+      </button>
+      <button
+        style="border: 1px solid black; height: 100%"
+        mat-raised-button
+        color="primary"
+        (click)="onForceReload()">FORCE RELOAD
+      </button>
+    </div>
+    <mat-form-field class="date-selector">
+      <mat-label>SELECT DATE</mat-label>
+      <mat-select
+        [value]="selectedDateDefaultValue"
+        (selectionChange)="doDateFilter($event.value)">
+        <mat-option *ngFor="let dateTimestamp of dateTimestamps" [value]="dateTimestamp">
+          {{dateTimestamp | date:"fullDate"}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <input  
+        matInput
+        type="text"
+        placeholder="FILTER"
+        (keyup)="doFilter($event.target.value)">
+    </mat-form-field> -->
+    <mat-paginator
+      style="border: 1px solid black;"
+      #paginator
+      [pageSize]="20"
+      [pageSizeOptions]="[4, 6, 20]">
+    </mat-paginator>
+
+  </div>
+
+  <mat-table fxLayout="column" fxLayoutAlign="start" [dataSource]="dataSource">
+
+    <ng-container matColumnDef="nameAndOrderId">
+      <mat-header-cell class="comments-header" *matHeaderCellDef>OrderId</mat-header-cell>
+      <mat-cell class="comments-cell" *matCellDef="let element">
+        <ul>
+          <li>ID: {{element.OrderId}}</li>
+          <li>{{element.CustomerInfo.name}}</li>
+          <li class="phone-icon">
+            <mat-icon>phone</mat-icon>{{element.CustomerInfo.phone}}
+          </li>
+        </ul>
+
+
+
+      </mat-cell>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="name">
+      <mat-header-cell class="comments-header" *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell class="comments-cell" *matCellDef="let element">{{element.CustomerInfo.name}}
+      </mat-cell>
+    </ng-container> -->
+
+
+
+    <ng-container matColumnDef="timestampPickupDate">
+      <mat-header-cell class="comments-header" *matHeaderCellDef>Pickup Date</mat-header-cell>
+      <mat-cell class="comments-cell" *matCellDef="let element">{{element.dateOrdered | date:"fullDate"}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="courses" class="courses">
+      <mat-header-cell class="courses-header" *matHeaderCellDef>COURSES</mat-header-cell>
+      <mat-cell style="padding-right: 20px;" fxLayout class="courses-cell" *matCellDef="let element">
+        <ul fxFlex>
+          <li class="course-name" *ngFor="let course of element.Menu.courses">
+            {{course.courseName}}
+            <ul class="course-list">
+              <li fxLayoutAlign="space-between" fxLayoutGap="20px" class="course-list-item"
+                *ngFor="let courseItem of course.courseItems">
+                <span>{{courseItem.amount}} X
+                  {{courseItem.name}}</span><span>{{courseItem.price * courseItem.amount | currency:"EUR":"symbol"}}</span>
+              </li>
+            </ul>
+          </li>
+          <!-- <li fxLayoutAlign="space-between" fxLayoutGap="20px">
+            <span>Total</span><span
+              class="totalPrice">{{element.Order.completedOrder.orderTotalPrice | currency:"EUR":"symbol"}}</span>
+          </li> -->
+        </ul>
+      </mat-cell>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="courses" class="courses">
+      <mat-header-cell class="courses-header" *matHeaderCellDef>COURSES</mat-header-cell>
+      <mat-cell style="padding-right: 20px;" fxLayout class="courses-cell" *matCellDef="let element">
+        <ul fxFlex>
+          <li class="course-name" *ngFor="let course of element.Order.completedOrder.sortedMenu.courses">
+            {{course.courseName}}
+            <ul class="course-list">
+              <li fxLayoutAlign="space-between" fxLayoutGap="20px" class="course-list-item"
+                *ngFor="let courseItem of course.courseItems">
+                <span>{{courseItem.amount}} X
+                  {{courseItem.name}}</span><span>{{courseItem.price * courseItem.amount | currency:"EUR":"symbol"}}</span>
+              </li>
+            </ul>
+          </li>
+          <li fxLayoutAlign="space-between" fxLayoutGap="20px">
+            <span>Total</span><span
+              class="totalPrice">{{element.Order.completedOrder.orderTotalPrice | currency:"EUR":"symbol"}}</span>
+          </li>
+        </ul>
+      </mat-cell>
+    </ng-container> -->
+
+    <ng-container matColumnDef="comments">
+      <mat-header-cell class="comments-header" *matHeaderCellDef>COMMENTS</mat-header-cell>
+      <mat-cell class="comments-cell" *matCellDef="let element">{{element.OrderInfo.comments}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="pickupTime">
+      <mat-header-cell class="pickuptime-header" *matHeaderCellDef>PICKUPTIME</mat-header-cell>
+      <mat-cell class="pickuptime-cell" *matCellDef="let element">
+        {{element.OrderInfo.pickupTime}}</mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+      *matRowDef="
+      let row; 
+      let even = even;
+      let odd = odd;
+      let index = index;
+      columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+
+</div>
+
+
+<!-- <div class="filterContainer" >
+  <form [formGroup]="dateSelectorForm" fxLayout fxLayoutGap="20px">
+    <mat-form-field>
+      <mat-label>SELECT DATE</mat-label>
+      <mat-select
+        [(value)]="selectedDate"
+        (selectionChange)="selectionChange($event.value)"
+        formControlName="dateSelector">
+        <mat-option *ngFor="let date of dateRange" [value]="date">{{date}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        formControlName="filter"
+        (keyup)="doFilter($event.target.value)"
+        placeholder="Filter">
+    </mat-form-field>
+  </form>
+</div>
+
+
+
+<mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="pickupDate">
+    <mat-header-cell class="mat-header-pick-up-date" *matHeaderCellDef>PickupDate</mat-header-cell>
+    <mat-cell class="mat-pick-up-date" *matCellDef="let element">{{element.pickupDate}}</mat-cell>
+  </ng-container>
+
+  <ng-container class="pick-up-time" matColumnDef="pickupTime">
+    <mat-header-cell class="mat-header-pick-up-time" *matHeaderCellDef >PickupTime</mat-header-cell>
+    <mat-cell class="mat-pick-up-time" *matCellDef="let element">{{element.pickupTime}}</mat-cell>
+  </ng-container>
+
+
+  <ng-container class="ordered-courses" matColumnDef="orderedCourses">
+    <mat-header-cell class="mat-header-ordered-courses" *matHeaderCellDef>Ordered Courses</mat-header-cell>
+    <mat-cell class="mat-ordered-courses" *matCellDef="let element">
+      <ul class="course-name-list">
+        <li class="course-name" *ngFor="let orderedCourse of element.orderedCourses">
+          {{orderedCourse.name | uppercase}}
+          <ul class="course-item-name-list">
+            <li class="course-item-name" *ngFor="let courseItem of orderedCourse.courseItems">
+              <span class="course-item-amount">{{courseItem.amount}} X </span>{{courseItem.name}}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell class="mat-header-name" *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell class="mat-name" *matCellDef="let element">{{element.name }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="comments">
+    <mat-header-cell class="mat-header-comments" *matHeaderCellDef>Comments</mat-header-cell>
+    <mat-cell class="mat-comments" *matCellDef="let element">{{element.comments }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="delivery">
+    <mat-header-cell class="mat-header-delivery" *matHeaderCellDef>Delivery</mat-header-cell>
+    <mat-cell class="mat-delivery" *matCellDef="let element">{{element.delivery }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <mat-header-cell class="mat-header-address" *matHeaderCellDef>Address</mat-header-cell>
+    <mat-cell class="mat-address" *matCellDef="let element">{{element.address }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="checkbox">
+    <mat-header-cell class="mat-header-handled" *matHeaderCellDef>Handled</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-checkbox (change)="handled($event.checked, element.timestamp)"></mat-checkbox>
+    </mat-cell>
+  </ng-container>
+
+  
+  
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="
+    let row;
+    let even = even;
+    let odd = odd;
+    let index = index
+    columns: displayedColumns;"
+    [ngClass]="{lightgreen: even, lightblue: odd}"></mat-row>
+</mat-table>
+<button (click)="onDelete()">DELETE</button> -->

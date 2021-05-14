@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+mat-card {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 5px;
+  border: 1px solid #CCC;
+  /* margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px; */
+  /* width: 100%; */
+  /* max-width: 500px; */
+  /* border: 2px solid pink; */
+}
+
+
+mat-sidenav-container {
+  width: 100%
+}
+
+section {
+  width: 100%;
+  /* border: 3px solid green; */
+}
+
+

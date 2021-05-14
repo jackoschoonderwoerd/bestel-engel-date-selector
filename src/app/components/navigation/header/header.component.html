@@ -1,0 +1,57 @@
+
+<mat-toolbar
+  fxFlex fxLayoutAlign="space-between center"
+  color="primary">
+  <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="50px;">
+    <div fxHide.gt-sm>
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon class="menu-icon">
+          menu
+        </mat-icon>
+        <!-- <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb-up"></mat-icon> -->
+      </button>
+    </div>
+    <div class="spacer"></div>
+    <div class="logo-username">
+      <a href="http://cafedeengelbewaarder.nl/">{{ company.companyInfo.name }}</a>
+      <!-- <a routerLink="">{{ company.companyInfo.name }}</a> -->
+    </div>
+  </div>
+  <!-- <div class="">
+    <a routerLink="test">Test</a>
+  </div>
+
+  <div class="">
+    <a routerLink="test-two">Test-Two</a>
+  </div> -->
+  
+  <div fxHide.lt-md fxLayout fxLayoutGap="25px">
+    <!-- <div *ngIf="adminData.authStatus" class="userName">
+      <span>logged in as: </span>{{adminData.userName | titlecase }}
+    </div> -->
+   
+
+    <div class="courseNames" fxLayout fxLayoutGap="20px">
+        <div class="course-name"><a routerLink="/">Home</a></div>
+    </div>
+
+    <div class="courseNames" fxLayout fxLayoutGap="20px">
+      <div *ngFor="let courseName of courseNames">
+        <div class="course-name"><a (click)="courseSelected(courseName)">{{ courseName | titlecase }}</a></div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="course-name"><a routerLink="/order">Bestellen</a></div>
+    </div>
+    <div>
+      <div *ngIf="isLoggedIn" class="course-name"><a class="cursor-to-pointer" routerLink="/overview">Admin</a></div>
+    </div>
+    <div  *ngIf="isLoggedIn" class="log-out">
+      <a (click)="onLogOut()">Log Out</a>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <div class="course-name"><a class="cursor-to-pointer" (click)="onLogIn()">Login</a></div>
+    </div>
+  </div>
+</mat-toolbar>

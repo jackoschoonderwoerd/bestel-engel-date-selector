@@ -1,0 +1,40 @@
+<section fxLayout="row" fxLayoutAlign="center">
+  <mat-card>
+    <h3 class="title" mat-card-title>{{company.companyInfo.name | titlecase}}</h3>
+    <mat-card-subtitle>
+      TAKE AWAY
+      BIJ LITTERAIR CAFÉ
+      DE ENGELBEWAARDER
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p>
+        Take away iedere dag tussen 17.00 en 19.00 uur
+      </p>
+      <p>
+        Hoe werkt het?
+        Geef je bestelling op via deze app of telefonisch via 06&nbsp;52&nbsp;29&nbsp;95&nbsp;22
+        Haal je bestelling af op de afgesproken tijd.
+      </p>
+      <p>
+        Heeft u een allergie, dan kunt u ons dat laten weten bij de opmerkingen aan het eind van het bestelformulier.
+      </p>
+      <p>
+        Nadat u digitaal heeft besteld ontvangt u van ons via email een bevestiging op het door u opgegeven email-adres
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        class="bestellen-button"
+        mat-raised-button
+        color="primary"
+        (click)="onBestellen()">
+        BESTELLEN
+      </button>
+    </mat-card-actions>
+    <mat-card-footer>
+      Café&nbsp;De&nbsp;Engelbewaarder <br> Kloveniersburgwal&nbsp;59 <br> Amsterdam <br>
+      <mat-icon>phone</mat-icon> 06&nbsp;522&nbsp;99&nbsp;522
+    </mat-card-footer>
+    <img src="https://www.instagram.com/p/COXN72VFDuz/?utm_source=ig_web_copy_link" alt="">
+  </mat-card>
+</section>

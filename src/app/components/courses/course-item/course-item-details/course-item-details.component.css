@@ -1,0 +1,14 @@
+
+
+.course-item-description {
+  margin-bottom: 15px;
+}
+
+.course-item-image-container {
+  max-width: 400px
+  /* height: 140px  */
+}
+
+.course-item-imageUrl {
+  width: 100%
+}

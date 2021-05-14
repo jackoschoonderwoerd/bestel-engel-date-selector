@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-dialog-actions *ngFor="for let course of courses">
+
+    <button
+      mat-raised-button
+      color="primary"
+      mat-dialog-close
+      (click)="onCourse(course)">
+      {{course | uppercase}}
+    </button>
+    
+
+
+  </mat-dialog-actions>
+  <mat-dialog-actions>
+    <button
+    mat-raised-button
+    color="warn"
+    mat-dialog-close
+    (click)="onPlaceOrder('order')">
+    PLACE ORDER
+  </button>
+  </mat-dialog-actions>
+</mat-card>

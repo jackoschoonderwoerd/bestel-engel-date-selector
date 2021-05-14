@@ -1,0 +1,36 @@
+.mobile-nav-open {
+  transform: translateX(0) !important;
+  background: #e3e3e3;
+  overflow: auto;
+}
+
+.mobile-nav-closed {
+  display: inline-block;
+  transform: translateX(-100%);
+  transition: transform 300ms;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.bestellen-menu-item {
+  border: 1px solid blue;
+}
+
+.shopping-basket-icon {
+  display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    margin-right: 5px;
+}
+
+.home-icon {
+  display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    margin-right: 5px;
+}

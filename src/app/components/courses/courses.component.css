@@ -1,0 +1,36 @@
+
+mat-card-title {
+    font-size: 16px;
+}
+
+.info-camera {
+    border: 5px solid black;
+}
+
+.filler-h-40 {
+    /* outline: 1px solid black; */
+    width: 40px;
+    height: 1px;
+    float: left;
+    /* display: inline-block; */
+}
+.filler-h-55 {
+    /* outline: 1px solid black; */
+    width: 55px;
+    height: 1px;
+    float: left;
+    /* display: inline-block; */
+}
+
+.naar-bestellijst-button {
+    width: 100%
+}
+.totaal-maaltijden {
+    margin-bottom: 15px;
+}
+/* .visibility-hidden {
+    visibility: hidden;
+    height: 1px;
+    padding: 0px;
+    margin: 0px;
+} */

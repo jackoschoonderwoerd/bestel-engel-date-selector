@@ -1,0 +1,34 @@
+<section fxLayout="row" fxLayoutAlign="center">
+  <mat-card class="course-item-card">
+    <div class="course-name-container">
+      <h3>{{courseName | titlecase }}</h3>
+    </div>
+    <!-- <div class="boterhammen" fxLayout fxLayoutAlign="start">
+      <p *ngIf="course.courseSubtitle">
+        {{course.courseSubtitle}}
+      </p>
+    </div> -->
+
+    <div *ngFor="let courseItem of course.courseItems" class="course-item">
+      <app-course-item
+        [courseItem]="courseItem"
+        [courseName]="courseName">
+      </app-course-item>
+    </div>
+    <div *ngIf="courseTotal !== 0" class="course-total-container"><b>
+        <div class="filler-h-55"></div>
+        <div class="totaal-maaltijden" fxLayout fxLayoutAlign="space-between">
+          <span>Totaal {{courseName}}</span>
+          <span>{{courseTotal | currency:"EUR"}}</span>
+        </div>
+      </b>
+    </div>
+    <button
+      class="naar-bestellijst-button"
+      mat-raised-button color="primary"
+      (click)="onNaarBestellijst()">
+      NAAR BESTELLIJST
+    </button>
+  </mat-card>
+</section>
+

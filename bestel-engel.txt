@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "bestel-engel-order",
+  "type": "object",
+  "properties": {
+    "customerInfo": {"type": "object"},
+    "destination": {"type": "string"},
+    "discounts": {"type": "object"},
+    "handled": {"type": "boolean"},
+    "orderTotalPrice": {"type": "integer"},
+    "sortedMenu": {"type": "object"},
+    "timestamp": {"type": "number"}
+  },
+  "required": ["customerInfo"]
+}
+
+integration request mapping template
+{
+    "completedOrder" : $input.json('$'),
+    "customerInfo" : $input.json('$.customerInfo'),
+    "customerName" : $input.json('$.customerInfo.name'),
+    "comments" : $input.json('$.customerInfo.comments'),
+    "pickupDate" : $input.json('$.customerInfo.pickupDate'),
+    "pickupTime" : $input.json('$.customerInfo.pickupTime'),
+    "sortedMenu" : $input.json('$.sortedMenu'),
+    "courses" : $input.json('$.sortedMenu.courses'),
+    "mainCourses" : $input.json('$.sortedMenu.courses[0]'),
+    "deserts" : $input.json('$.sortedMenu.courses[1]'),
+    "wines" : $input.json('$.sortedMenu.courses[2]'),
+    "timestamp" : "$input.json('$.timestamp')",
+    "orderTotalPrice" : "$input.json('$.orderTotalPrice')"
+}

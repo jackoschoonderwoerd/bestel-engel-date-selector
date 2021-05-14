@@ -1,0 +1,49 @@
+
+<div class="course-item-container">
+  <form [formGroup]="itemOrderForm">
+    <select
+      class="select-container custom-select"
+      formControlName="amount"
+      (change)="onChange($event)">
+      <option
+        *ngFor="let option of options"
+        [value]="option">
+        {{option}}
+      </option>
+    </select>
+  </form>
+
+
+  <div class="name-container"
+    (click)="onInfo(courseItem)"
+    [ngStyle]="{cursor: determineInfoStyle()}">
+    <div class="">
+
+      <span class="course-item-name" >{{courseItem.name}}</span><br>
+    </div>
+    <div class="info-camera">
+      <!-- <mat-icon class="camera" *ngIf="courseItem.imageUrl">photo_camera</mat-icon> -->
+      <mat-icon class="info" *ngIf="courseItem.description">info</mat-icon>
+    </div>
+  </div>
+
+
+  <div
+    class="price-container">{{courseItem.price | currency:"EUR"}}
+  </div>
+
+  <div
+    class="amount-container">
+    <span *ngIf="courseItem.amount !== 0 && courseItem.amount !== '0'">
+      {{courseItem.amount}}X
+    </span>
+  </div>
+
+  <div
+    class="total-container">
+    <span *ngIf="courseItemTotal !== 0">
+      {{courseItemTotal | currency:"EUR"}}
+    </span>
+  </div>
+</div>
+

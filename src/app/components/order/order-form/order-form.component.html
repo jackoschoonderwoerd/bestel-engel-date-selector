@@ -1,0 +1,111 @@
+<div class="mat-card-container">
+  <mat-card>
+    <form
+      [formGroup]="customerInfoForm"
+      fxLayout="column"
+      fxLayoutAlign="center"
+      (ngSubmit)="sendOrder()">
+
+      <mat-form-field>
+        <label for="name"></label>
+        <input type="text"
+          id="name"
+          matInput
+          placeholder="NAAM *"
+          formControlName="name"
+          #nameInput
+          (change)="customerInfoFormChanged()">
+      </mat-form-field>
+
+      <div class="email" fxLayout fxLayoutAlign="space-between">
+        <mat-form-field fxFlex>
+          <label for="email"></label>
+          <input type="email"
+            id="email"
+            matInput
+            placeholder="EMAIL *"
+            formControlName="email"
+            #emailInput
+            (change)="customerInfoFormChanged()">
+        </mat-form-field>
+        <mat-icon class="info-icon" (click)="onEmail()">info</mat-icon>
+      </div>
+
+      <div class="phone" fxLayout fxLayoutAlign="space-between">
+        <mat-form-field fxFlex>
+          <input
+            type="number"
+            matInput
+            placeholder="TELEFOONNUMMER *"
+            formControlName="phone"
+            #phoneInput
+            (change)="customerInfoFormChanged()">
+        </mat-form-field>
+        <mat-icon class="info-icon" (click)="onPhone()">info</mat-icon>
+      </div>
+
+      <div class="select-date-container" fxLayout fxLayoutAlign="space-between"> 
+        <mat-form-field>
+          <mat-label>SELECTEER DATUM *</mat-label>
+          <mat-select
+            formControlName="selectedDate"
+            (selectionChange)="pickupDateChanged($event)">
+            <mat-option
+              *ngFor="let pickupDate of pickupDates" [value]="pickupDate">
+              {{pickupDate | date:"fullDate"}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-icon
+          class="info-icon" 
+          (click)="onSelectPickupDateInfo()"
+          *ngIf="showPickupDateInfoIcon">info
+        </mat-icon>
+      </div>
+
+      <mat-form-field *ngIf="showPickupTimeslots">
+        <mat-label>SELECTEER AFHAALTIJDSTIP *</mat-label>
+        <mat-select
+          formControlName="pickupTime"
+          (selectionChange)="pickupTimeChanged($event)">
+          <mat-option
+            *ngFor="let pickupTimeslot of pickupTimeslots" [value]="pickupTimeslot">
+            {{pickupTimeslot}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <mat-icon *ngIf="showPhoneIcon" class="info-icon afhaaltijdstip-icon blink" (click)="onAfhaalTijdstip()">phone</mat-icon> -->
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>OPMERKINGEN / ALLERGIËN</mat-label>
+        <textarea
+          matInput
+          placeholder=""
+          formControlName="comments"
+          (change)="customerInfoFormChanged()">
+        </textarea>
+      </mat-form-field>
+
+      <div class="button-container" fxLayout fxLayoutAlign="space-between">
+        <button
+          class="bestel-button"
+          mat-raised-button color="primary"
+          type="submit"
+
+          [disabled]="customerInfoForm.invalid || totalPrice === 0">
+          BESTEL
+        </button>
+        <div class="filler-h-20"></div>
+        <button
+          class="cancel-button"
+          mat-raised-button color="warn"
+          type="button"
+          (click)="onCancel()">
+          CANCEL
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

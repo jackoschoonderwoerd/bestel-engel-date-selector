@@ -1,0 +1,38 @@
+
+<div
+  class="course-name"
+  fxLayout fxLayoutAlign="space-between">
+  <span>
+    {{course.courseName | titlecase}}
+  </span>
+  <span
+    class="material-icons edit-icon"
+    (click)="onEdit(course.courseName)">
+    edit
+  </span>
+  
+</div>
+<p
+  class="course-subtitle"
+  *ngIf="ordersPresent">
+  {{course.courseSubtitle | titlecase}}
+</p>
+<div *ngFor="let courseItem of course.courseItems">
+  <div  
+    class="courseItem" 
+    *ngIf="courseItem.amount !== 0">
+    <div class="name">
+      {{courseItem.name | titlecase}}
+    </div>
+    <div class="amount">
+      {{courseItem.amount}}X
+    </div>
+    <div class="price">
+      {{courseItem.price | currency:"EUR"}}
+    </div>
+    <div class="total-price">
+      {{courseItem.price * courseItem.amount | currency:"EUR"}}
+    </div>
+  </div>
+</div>
+<hr>

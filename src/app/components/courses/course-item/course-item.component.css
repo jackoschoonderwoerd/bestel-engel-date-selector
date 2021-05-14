@@ -1,0 +1,82 @@
+.camera:hover {
+    cursor: pointer;
+}
+
+.info{
+    /* margin-top: 10px; */
+    /* font-size: 20px; */
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+
+.info-camera {
+    /* border: 1px solid black; */
+    justify-content: center;
+}
+
+.course-item-name {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.course-item-container {
+    margin-bottom: 10px;
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+    background-color: #e8e8e8;
+    padding: 5px;
+}
+.course-item-container mat-icon {
+    /* vertical-align: middle; */
+    margin-left: 5px;;
+}
+select{
+    margin-right: 5px; 
+    height: 25px;
+    height: 45px;
+    width: 35px;
+    width: 50px;
+    border: 1px solid black;
+    /* flex:10; */
+}
+
+.name-container {
+    /* outline: 1px solid black; */
+    font-size: 12px;
+    align-content: center;
+    flex:47;
+}
+.info-container {
+    /* outline: 1px solid black; */
+    flex: 10;
+}
+.price-container {
+    /* outline: 1px solid black; */
+    flex: 15;
+    text-align: right;
+    font-size: 12px;
+}
+.amount-container {
+    /* outline: 1px solid black; */
+    flex: 10;
+    font-style: italic;
+    text-align: right;
+    padding-right: 3px;
+    font-size: 12px
+}
+.total-container {
+    /* outline: 1px solid black; */
+    flex: 18;
+    text-align: right;
+    font-size: 12px;
+}
+
+
+
+
+.mat-select-container {
+    width: 150px;
+    height: 20px;
+}

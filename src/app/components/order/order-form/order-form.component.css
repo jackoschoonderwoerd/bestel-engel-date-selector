@@ -1,0 +1,93 @@
+.mat-card-container {
+  max-width: 500px;
+}
+.button-container {
+  display: flex;
+}
+.phone:hover, .email:hover {
+  cursor: pointer;
+}
+
+.email mat-icon {
+  margin-right: 17px;
+  vertical-align: middle;
+  font-size: 2.5em;
+}
+
+.phone mat-icon {
+  margin-right: 17px;
+  vertical-align: middle;
+  font-size: 2.5em;
+}
+
+.filler-h-20 {
+  width: 20px;
+}
+.bestel-button {
+  flex: 2
+}
+.cancel-button {
+  flex: 1
+}
+.e-weekend {
+  color: green;
+}
+.select-date-container {
+  /* border: 1px solid red; */
+}
+.select-date-container mat-form-field {
+  width: 100%;
+  /* margin-right: 17px; */
+  /* border: 1px solid green; */
+}
+.select-date-container mat-icon {
+  /* border: 1px solid black; */
+  margin-right: 17px;
+}
+.select-date-container mat-icon:hover {
+  cursor: pointer;
+}
+
+.material-icons {
+  position: relative;
+  bottom: 10px;
+  margin-left: 30px;
+  /* border: 2px solid red; */
+  /* height: 50px;
+  width: 50px; */
+  font-size: 40px;
+  float: right;
+  color: black;
+}
+
+.afhaaltijdstip {
+  
+}
+.afhaaltijdstip-icon {
+  color: green;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+/* .mat-form-field.ng-valid.ng-dirty:not(form) {
+  border: solid 2px lightgreen;
+}
+
+.mat-form-field.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+  border: solid 2px lightcoral;
+} */
+
+.blink {
+  animation: blink 2s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

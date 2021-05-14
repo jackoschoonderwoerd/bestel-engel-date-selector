@@ -1,0 +1,31 @@
+<div
+  class="title" 
+  mat-dialog-title
+  fxLayout
+  fxLayoutAlign="center">
+  <span>
+    {{courseItem.name | titlecase}}
+  </span>
+</div>
+  
+
+<mat-dialog-content>
+  <!-- <div class="course-item-description">
+    {{courseItem.description}}
+  </div> -->
+
+  <div  class="course-item-image-container">
+    <img class="course-item-imageUrl" src="{{courseItem.imageUrl}}" alt="">
+  </div>
+  <div
+    class="ingredients"
+    fxLayout="column"
+    fxLayoutAlign="center center">
+    <p *ngFor="let ingredient of ingredients">
+      {{ingredient}}
+    </p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout fxLayoutAlign="end">
+  <mat-icon [mat-dialog-close]="'close'">close</mat-icon>
+</mat-dialog-actions>

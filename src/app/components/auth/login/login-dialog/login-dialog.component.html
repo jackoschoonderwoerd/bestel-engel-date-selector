@@ -1,0 +1,33 @@
+<p>login-dialog works!</p>
+<h1 mat-dialog-title>LOGIN</h1>
+<mat-dialog-content >
+  <form
+    fxLayout="column"
+    fxLayoutGap="7px" 
+    [formGroup]="logInForm" 
+    (ngSubmit)="onLogIn()">
+    <mat-form-field>
+      <input
+        type="text" 
+        matInput
+        placeholder="USERNAME"
+        formControlName="userName">
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        placeholder="PASSWORD"
+        formControlName="passWord">
+    </mat-form-field>
+    <button
+      mat-raised-button color="primary"
+      type="submit"
+      [mat-dialog-close]="logInForm.value">LOGIN</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      mat-dialog-close>CANCEL</button>
+  </form>
+</mat-dialog-content>

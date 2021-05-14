@@ -1,0 +1,164 @@
+.wrapper {
+  padding: 15px;
+}
+
+
+.header {
+  
+  border: 1px Solid black;
+}
+
+ul {
+  list-style: none;
+  margin: o;
+  padding: 0;
+}
+
+mat-row {
+  vertical-align: top;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+mat-cell, mat-header-cell {
+  padding: 10px;
+}
+
+.date-selector {
+  width: 250px;
+}
+
+.orderid-header, .orderid-cell {
+  flex: 2;
+}
+.courses-header, .courses-cell {
+  flex: 5;
+}
+.courses-cell {
+  border: 1px solid black;
+  margin: 5px;
+}
+.comments-header, .comments-cell {
+  flex: 3;
+}
+.pickuptime-header, .pickuptime-cell {
+  margin-right: 15px;
+  flex: 3;
+}
+.pickuptime-cell {
+  border: 1px solid black;
+}
+.course-name {
+  font-weight: bold;
+}
+.course-list-item {
+  font-weight: 400;
+}
+.totalPrice {
+  font-weight: bold;
+}
+
+
+
+.course-item {
+  font-weight: 400;
+}
+mat-icon {
+  font-size: 15px;
+}
+
+.phone-icon {
+  vertical-align: middle;
+}
+
+/* * {
+  font-size: 1vw;
+}
+
+.filterContainer {
+  margin-left: 2vw;
+}
+
+mat-header-cell, mat-cell {
+  flex: none;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 1vw;
+}
+
+.lightgreen { 
+  background-color: lightgreen 
+}
+.lightblue { 
+  background-color: lightblue
+}
+.orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
+
+ul {  
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mat-header-pick-up-date, .mat-pick-up-date {
+  width: 10%;
+}
+.mat-header-pick-up-time, .mat-pick-up-time {
+  width: 7%;
+}
+
+.mat-header-ordered-courses,
+.mat-ordered-courses {
+  width: 28%
+}
+.course-item-name-list li:nth-child(even) {
+  background: #CCC;
+}
+.course-name-list {
+  width: 100%
+}
+.mat-header-name, .mat-name {
+  width: 20%;
+}
+.mat-header-comments, .mat-comments {
+  width: 10%;
+}
+.mat-header-delivery, .mat-delivery {
+  width: 5%;
+}
+.mat-header-address, .mat-address {
+  width: 15%;
+}
+.mat-header-handled, .mat-handled {
+  width: 5%;
+}
+.course-name {
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+.course-item-name {
+  
+  color: black;
+  background-color: white;
+}
+.mat-handled {
+  color: red;
+}
+.handled {
+  color: red;
+}
+.unhandled {
+  color: green;
+} */
